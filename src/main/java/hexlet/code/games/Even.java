@@ -13,8 +13,7 @@ public class Even {
 
         String[] questions = new String[Engine.NUMBER_OF_ROUND_TO_WIN];
         String[] answers = new String[Engine.NUMBER_OF_ROUND_TO_WIN];
-
-        for(int i = 0; i < Engine.NUMBER_OF_ROUND_TO_WIN; i++) {
+        for (int i = 0; i < Engine.NUMBER_OF_ROUND_TO_WIN; i++) {
             int number = RandomUtils.nextInt(0, MAX_RANDOM_NUMBER);
             String questionNumber = String.valueOf(number);
             questions[i] = questionNumber;

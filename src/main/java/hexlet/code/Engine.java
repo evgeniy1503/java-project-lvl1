@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Engine {
 
-    public static int NUMBER_OF_ROUND_TO_WIN = 3;
+    public static final int NUMBER_OF_ROUND_TO_WIN = 3;
 
     public static void playGame(String gameRule, String[] questions, String[] answers) {
         System.out.println("Welcome to the Brain Games!");
@@ -24,7 +24,7 @@ public class Engine {
                 System.out.println("Correct!");
             } else {
                 System.out.println("'" + answer + "'" + " is wrong answer ;(. Correct answer was "
-                        + "'" + answers[i] + "' .");
+                        + "'" + answers[i] + "'.");
                 System.out.println("Let's try again, " + namePlayer + "!");
                 break;
             }
