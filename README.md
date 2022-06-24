@@ -5,3 +5,6 @@
 
 ### The game is an even number:
 <a href="https://asciinema.org/a/Fg8XoHVNoXILfAlkyK4Cqjh1M" target="_blank"><img src="https://asciinema.org/a/Fg8XoHVNoXILfAlkyK4Cqjh1M.svg" /></a>
+
+### The game is a calculation of numbers:
+<a href="https://asciinema.org/a/VWHzcMnW9qhL8Iza8HI9nXjCD" target="_blank"><img src="https://asciinema.org/a/VWHzcMnW9qhL8Iza8HI9nXjCD.svg" /></a>

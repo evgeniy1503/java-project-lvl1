@@ -19,7 +19,6 @@ public class Engine {
             System.out.print("Your answer: ");
             Scanner inAnswer = new Scanner(System.in);
             String answer = inAnswer.nextLine();
-
             if (answer.equals(answers[i])) {
                 System.out.println("Correct!");
             } else {

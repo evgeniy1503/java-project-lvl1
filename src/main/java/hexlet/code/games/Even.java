@@ -10,7 +10,6 @@ public class Even {
     public static final int MAX_RANDOM_NUMBER = 100;
 
     public static void gameEven() {
-
         String[] questions = new String[Engine.NUMBER_OF_ROUND_TO_WIN];
         String[] answers = new String[Engine.NUMBER_OF_ROUND_TO_WIN];
         for (int i = 0; i < Engine.NUMBER_OF_ROUND_TO_WIN; i++) {
