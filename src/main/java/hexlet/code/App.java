@@ -3,6 +3,7 @@ package hexlet.code;
 
 import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
+import hexlet.code.games.Gsd;
 
 import java.util.Scanner;
 
@@ -11,6 +12,7 @@ public class App {
     public static final int GREET = 1;
     public static final int EVEN = 2;
     public static final int CACL = 3;
+    public static final int GSD = 4;
 
     public static void main(String[] args) {
 
@@ -18,6 +20,7 @@ public class App {
         System.out.println("1 - Greet");
         System.out.println("2 - Even");
         System.out.println("3 - Calc");
+        System.out.println("4 - GSD");
         System.out.println("0 - Exit");
         Scanner in = new Scanner(System.in);
         System.out.print("Your choice: ");
@@ -34,7 +37,9 @@ public class App {
         }
         if (numberGame == CACL) {
             Calc.gameCalc();
-
+        }
+        if (numberGame == GSD) {
+            Gsd.gameGsd();
         }
     }
 }

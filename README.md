@@ -8,3 +8,6 @@
 
 ### The game is a calculation of numbers:
 <a href="https://asciinema.org/a/VWHzcMnW9qhL8Iza8HI9nXjCD" target="_blank"><img src="https://asciinema.org/a/VWHzcMnW9qhL8Iza8HI9nXjCD.svg" /></a>
+
+### The game is GSD:
+<a href="https://asciinema.org/a/6ONOcQLd39v2lTCVfk1hTOU8L" target="_blank"><img src="https://asciinema.org/a/6ONOcQLd39v2lTCVfk1hTOU8L.svg" /></a>
