@@ -6,9 +6,12 @@ import org.apache.commons.lang3.RandomUtils;
 public class Gsd {
     public static final String GAME_RULE = ("Find the greatest common divisor of given numbers.");
     public static final int MAX_RANDOM_NUMBER = 100;
+
     public static void gameGsd() {
+
         String[] questions = new String[Engine.NUMBER_OF_ROUND_TO_WIN];
         String[] answers = new String[Engine.NUMBER_OF_ROUND_TO_WIN];
+
         for (int i = 0; i < Engine.NUMBER_OF_ROUND_TO_WIN; i++) {
             int numberOne = RandomUtils.nextInt(1, MAX_RANDOM_NUMBER);
             int numberTwo = RandomUtils.nextInt(1, MAX_RANDOM_NUMBER);

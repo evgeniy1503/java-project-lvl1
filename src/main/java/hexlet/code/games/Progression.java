@@ -12,6 +12,7 @@ public class Progression {
     public static final int MAX_STEP_PROGRESSION = 15;
 
     public static void gameProgression() {
+
         String[] questions = new String[Engine.NUMBER_OF_ROUND_TO_WIN];
         String[] answers = new String[Engine.NUMBER_OF_ROUND_TO_WIN];
 

@@ -11,8 +11,10 @@ public class Calc {
     public static final char[] OPERATORS = {'*', '+', '-'};
 
     public static void gameCalc() {
+
         String[] questions = new String[Engine.NUMBER_OF_ROUND_TO_WIN];
         String[] answers = new String[Engine.NUMBER_OF_ROUND_TO_WIN];
+
         for (int i = 0; i < Engine.NUMBER_OF_ROUND_TO_WIN; i++) {
             int numberOne = RandomUtils.nextInt(0, MAX_RANDOM_NUMBER);
             int numberTwo = RandomUtils.nextInt(0, MAX_RANDOM_NUMBER);
