@@ -14,3 +14,6 @@
 
 ### The game is Progression:
 <a href="https://asciinema.org/a/jgcEaPKYb6Jp041L2DwIwGcG0" target="_blank"><img src="https://asciinema.org/a/jgcEaPKYb6Jp041L2DwIwGcG0.svg" /></a>
+
+### The game is Prime:
+<a href="https://asciinema.org/a/CwOhX7xmwOh22GflNfKkDHS5S" target="_blank"><img src="https://asciinema.org/a/CwOhX7xmwOh22GflNfKkDHS5S.svg" /></a>

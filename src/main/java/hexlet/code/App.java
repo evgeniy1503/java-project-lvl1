@@ -1,10 +1,11 @@
 package hexlet.code;
 
 
-import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
 import hexlet.code.games.Gsd;
+import hexlet.code.games.Calc;
 import hexlet.code.games.Progression;
+import hexlet.code.games.Prime;
 
 import java.util.Scanner;
 
@@ -15,6 +16,7 @@ public class App {
     public static final int CACL = 3;
     public static final int GSD = 4;
     public static final int PROGRESSION = 5;
+    public static final int PRIME = 6;
 
     public static void main(String[] args) {
 
@@ -24,6 +26,7 @@ public class App {
         System.out.println("3 - Calc");
         System.out.println("4 - GSD");
         System.out.println("5 - Progression");
+        System.out.println("6 - Prime");
         System.out.println("0 - Exit");
         Scanner in = new Scanner(System.in);
         System.out.print("Your choice: ");
@@ -31,21 +34,20 @@ public class App {
 
         if (numberGame == EXIT) {
             System.out.println("You have left the game!");
-        }
-        if (numberGame == GREET) {
+        } else if (numberGame == GREET) {
             Cli.playerName();
-        }
-        if (numberGame == EVEN) {
+        } else if (numberGame == EVEN) {
             Even.gameEven();
-        }
-        if (numberGame == CACL) {
+        } else if (numberGame == CACL) {
             Calc.gameCalc();
-        }
-        if (numberGame == GSD) {
+        } else if (numberGame == GSD) {
             Gsd.gameGsd();
-        }
-        if (numberGame == PROGRESSION) {
+        } else if (numberGame == PROGRESSION) {
             Progression.gameProgression();
+        } else if (numberGame == PRIME) {
+            Prime.gamePrime();
+        } else {
+            System.out.println("Selection error! Try to choose the game again!");
         }
 
     }

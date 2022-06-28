@@ -20,18 +20,18 @@ public class Progression {
             int firstNumberProgression = RandomUtils.nextInt(0, MAX_FIST_NUMBER_PROGRESSION);
             int stepProgression = RandomUtils.nextInt(1, MAX_STEP_PROGRESSION);
             int[] progressionsArray = new int[progressionLength];
-            String question = String.valueOf(firstNumberProgression);
+            StringBuilder question = new StringBuilder(String.valueOf(firstNumberProgression));
             for (int j = 0; j < progressionLength; j++) {
                 int progressionNumber = firstNumberProgression + stepProgression;
-                question += " " + progressionNumber;
+                question.append(" ").append(progressionNumber);
                 progressionsArray[j] = firstNumberProgression;
                 firstNumberProgression = progressionNumber;
             }
 
             int responseIndex = RandomUtils.nextInt(0, progressionLength);
             String answer = String.valueOf(progressionsArray[responseIndex]);
-            question = question.replaceFirst(answer, "..");
-            questions[i] = question;
+            question = new StringBuilder(question.toString().replaceFirst(answer, ".."));
+            questions[i] = question.toString();
             answers[i] = answer;
         }
         Engine.playGame(GAME_RULE, questions, answers);
