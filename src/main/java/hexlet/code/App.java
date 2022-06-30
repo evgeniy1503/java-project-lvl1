@@ -32,22 +32,15 @@ public class App {
         System.out.print("Your choice: ");
         int numberGame = in.nextInt();
 
-        if (numberGame == EXIT) {
-            System.out.println("You have left the game!");
-        } else if (numberGame == GREET) {
-            Cli.playerName();
-        } else if (numberGame == EVEN) {
-            Even.gameEven();
-        } else if (numberGame == CACL) {
-            Calc.gameCalc();
-        } else if (numberGame == GSD) {
-            Gsd.gameGsd();
-        } else if (numberGame == PROGRESSION) {
-            Progression.gameProgression();
-        } else if (numberGame == PRIME) {
-            Prime.gamePrime();
-        } else {
-            System.out.println("Selection error! Try to choose the game again!");
+        switch (numberGame) {
+            case EXIT -> System.out.println("You have left the game!");
+            case GREET -> Cli.playerName();
+            case EVEN -> Even.gameEven();
+            case CACL -> Calc.gameCalc();
+            case GSD -> Gsd.gameGsd();
+            case PROGRESSION -> Progression.gameProgression();
+            case PRIME -> Prime.gamePrime();
+            default -> System.out.println("Selection error! Try to choose the game again!");
         }
 
     }

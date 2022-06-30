@@ -6,7 +6,7 @@ public class Engine {
 
     public static final int NUMBER_OF_ROUND_TO_WIN = 3;
 
-    public static void playGame(String gameRule, String[] questions, String[] answers) {
+    public static void playGame(String gameRule, String[][] questionsAndAnswers) {
         System.out.print("May I have your name? ");
         Scanner inName = new Scanner(System.in);
         String namePlayer = inName.nextLine();
@@ -14,21 +14,20 @@ public class Engine {
         System.out.println(gameRule);
 
         for (int i = 0; i < NUMBER_OF_ROUND_TO_WIN; i++) {
-            System.out.println("Question: " + questions[i]);
+            System.out.println("Question: " + questionsAndAnswers[i][0]);
             System.out.print("Your answer: ");
             Scanner inAnswer = new Scanner(System.in);
             String answer = inAnswer.nextLine();
-            if (answer.equals(answers[i])) {
+            if (answer.equals(questionsAndAnswers[i][1])) {
                 System.out.println("Correct!");
             } else {
                 System.out.println("'" + answer + "'" + " is wrong answer ;(. Correct answer was "
-                        + "'" + answers[i] + "'.");
+                        + "'" + questionsAndAnswers[i][1] + "'.");
                 System.out.println("Let's try again, " + namePlayer + "!");
-                break;
+                return;
             }
-            if (i == 2) {
-                System.out.println("Congratulations, " + namePlayer + "!");
-            }
+
         }
+        System.out.println("Congratulations, " + namePlayer + "!");
     }
 }
