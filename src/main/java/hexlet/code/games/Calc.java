@@ -20,20 +20,20 @@ public class Calc {
             int numberTwo = RandomUtils.nextInt(0, MAX_RANDOM_NUMBER);
             String operation = RandomStringUtils.random(1, OPERATORS);
             String questionExpression = numberOne + " " + operation + " " + numberTwo;
-            questionsAndAnswers[i][0] = questionExpression;
+            questionsAndAnswers[i][Engine.QUESTIONS_INDEX] = questionExpression;
             int answerExpression;
             switch (operation) {
                 case "*" -> {
                     answerExpression = numberOne * numberTwo;
-                    questionsAndAnswers[i][1] = String.valueOf(answerExpression);
+                    questionsAndAnswers[i][Engine.ANSWERS_INDEX] = String.valueOf(answerExpression);
                 }
                 case "+" -> {
                     answerExpression = numberOne + numberTwo;
-                    questionsAndAnswers[i][1] = String.valueOf(answerExpression);
+                    questionsAndAnswers[i][Engine.ANSWERS_INDEX] = String.valueOf(answerExpression);
                 }
                 default -> {
                     answerExpression = numberOne - numberTwo;
-                    questionsAndAnswers[i][1] = String.valueOf(answerExpression);
+                    questionsAndAnswers[i][Engine.ANSWERS_INDEX] = String.valueOf(answerExpression);
                 }
             }
 

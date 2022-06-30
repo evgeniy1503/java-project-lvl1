@@ -19,22 +19,24 @@ public class Progression {
             int progressionLength = RandomUtils.nextInt(MIN_PROGRESSION_LENGTH, MAX_PROGRESSION_LENGTH);
             int firstNumberProgression = RandomUtils.nextInt(0, MAX_FIST_NUMBER_PROGRESSION);
             int stepProgression = RandomUtils.nextInt(1, MAX_STEP_PROGRESSION);
-            int[] progressionsArray = new int[progressionLength];
-            StringBuilder question = new StringBuilder(String.valueOf(firstNumberProgression));
-            for (int j = 0; j < progressionLength; j++) {
-                int progressionNumber = firstNumberProgression + stepProgression;
-                question.append(" ").append(progressionNumber);
-                progressionsArray[j] = firstNumberProgression;
-                firstNumberProgression = progressionNumber;
-            }
 
             int responseIndex = RandomUtils.nextInt(0, progressionLength);
-            String answer = String.valueOf(progressionsArray[responseIndex]);
-            question = new StringBuilder(question.toString().replaceFirst(answer, ".."));
-            questionsAndAnswers[i][0] = question.toString();
-            questionsAndAnswers[i][1] = answer;
+            String[] progression = makeProgression(firstNumberProgression, stepProgression, progressionLength);
+            String changeNumber = progression[responseIndex];
+            String question = String.join(" ", progression);
+            question = question.replace(changeNumber, "..");
+            questionsAndAnswers[i][Engine.QUESTIONS_INDEX] = question;
+            questionsAndAnswers[i][Engine.ANSWERS_INDEX] = changeNumber;
         }
         Engine.playGame(GAME_RULE, questionsAndAnswers);
+    }
+    public static String[] makeProgression(int first, int step, int length) {
+        String[] progression = new String[length];
+        for (int i = 0; i < length; i++) {
+            progression[i] = String.valueOf(first);
+            first = first + step;
+        }
+        return progression;
     }
 
 }

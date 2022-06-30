@@ -15,9 +15,9 @@ public class Gsd {
             int numberOne = RandomUtils.nextInt(1, MAX_RANDOM_NUMBER);
             int numberTwo = RandomUtils.nextInt(1, MAX_RANDOM_NUMBER);
             String question = numberOne + " " + numberTwo;
-            questionsAndAnswers[i][0] = question;
+            questionsAndAnswers[i][Engine.QUESTIONS_INDEX] = question;
             String answer = Integer.toString(gsd(numberOne, numberTwo));
-            questionsAndAnswers[i][1] = answer;
+            questionsAndAnswers[i][Engine.ANSWERS_INDEX] = answer;
         }
         Engine.playGame(GAME_RULE, questionsAndAnswers);
     }

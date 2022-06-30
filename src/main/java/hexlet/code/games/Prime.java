@@ -14,8 +14,8 @@ public class Prime {
         for (int i = 0; i < Engine.NUMBER_OF_ROUND_TO_WIN; i++) {
             int number = RandomUtils.nextInt(2, MAX_RANDOM_NUMBER);
             String questionNumber = String.valueOf(number);
-            questionsAndAnswers[i][0] = questionNumber;
-            questionsAndAnswers[i][1] = isCheckPrime(number) ? "yes" : "no";
+            questionsAndAnswers[i][Engine.QUESTIONS_INDEX] = questionNumber;
+            questionsAndAnswers[i][Engine.ANSWERS_INDEX] = isCheckPrime(number) ? "yes" : "no";
         }
         Engine.playGame(GAME_RULE, questionsAndAnswers);
     }
