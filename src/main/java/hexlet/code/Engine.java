@@ -10,16 +10,15 @@ public class Engine {
 
     public static void playGame(String gameRule, String[][] questionsAndAnswers) {
         System.out.print("May I have your name? ");
-        Scanner inName = new Scanner(System.in);
-        String namePlayer = inName.nextLine();
+        Scanner inText = new Scanner(System.in);
+        String namePlayer = inText.nextLine();
         System.out.println("Hello, " + namePlayer + "!");
         System.out.println(gameRule);
 
         for (int i = 0; i < NUMBER_OF_ROUND_TO_WIN; i++) {
             System.out.println("Question: " + questionsAndAnswers[i][QUESTIONS_INDEX]);
             System.out.print("Your answer: ");
-            Scanner inAnswer = new Scanner(System.in);
-            String answer = inAnswer.nextLine();
+            String answer = inText.nextLine();
             if (answer.equals(questionsAndAnswers[i][ANSWERS_INDEX])) {
                 System.out.println("Correct!");
             } else {

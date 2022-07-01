@@ -21,7 +21,6 @@ public class Progression {
             int progressionLength = RandomUtils.nextInt(MIN_PROGRESSION_LENGTH, MAX_PROGRESSION_LENGTH);
             int firstNumberProgression = RandomUtils.nextInt(0, MAX_FIST_NUMBER_PROGRESSION);
             int stepProgression = RandomUtils.nextInt(1, MAX_STEP_PROGRESSION);
-
             int responseIndex = RandomUtils.nextInt(1, progressionLength);
             String[] progression = makeProgression(firstNumberProgression, stepProgression, progressionLength);
             String changeNumber = progression[responseIndex];
