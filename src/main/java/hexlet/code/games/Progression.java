@@ -3,8 +3,6 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import org.apache.commons.lang3.RandomUtils;
 
-import java.util.Arrays;
-
 public class Progression {
 
     public static final String GAME_RULE = "What number is missing in the progression?";
@@ -28,7 +26,7 @@ public class Progression {
             question = question.replace(changeNumber, "..");
             questionsAndAnswers[i][Engine.QUESTIONS_INDEX] = question;
             questionsAndAnswers[i][Engine.ANSWERS_INDEX] = changeNumber;
-            System.out.println(Arrays.deepToString(questionsAndAnswers));
+
         }
         Engine.playGame(GAME_RULE, questionsAndAnswers);
     }
