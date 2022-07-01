@@ -31,10 +31,12 @@ public class Calc {
                     answerExpression = numberOne + numberTwo;
                     questionsAndAnswers[i][Engine.ANSWERS_INDEX] = String.valueOf(answerExpression);
                 }
-                default -> {
+                case "-" -> {
                     answerExpression = numberOne - numberTwo;
                     questionsAndAnswers[i][Engine.ANSWERS_INDEX] = String.valueOf(answerExpression);
                 }
+                default ->
+                        throw new Error("There is no such operation: " + operation);
             }
 
 

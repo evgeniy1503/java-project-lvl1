@@ -12,7 +12,7 @@ public class Prime {
         String[][] questionsAndAnswers = new String[Engine.NUMBER_OF_ROUND_TO_WIN][2];
 
         for (int i = 0; i < Engine.NUMBER_OF_ROUND_TO_WIN; i++) {
-            int number = RandomUtils.nextInt(2, MAX_RANDOM_NUMBER);
+            int number = RandomUtils.nextInt(0, MAX_RANDOM_NUMBER);
             String questionNumber = String.valueOf(number);
             questionsAndAnswers[i][Engine.QUESTIONS_INDEX] = questionNumber;
             questionsAndAnswers[i][Engine.ANSWERS_INDEX] = isCheckPrime(number) ? "yes" : "no";
@@ -20,6 +20,9 @@ public class Prime {
         Engine.playGame(GAME_RULE, questionsAndAnswers);
     }
     public static boolean isCheckPrime(int number) {
+        if (number < 2) {
+            return false;
+        }
         for (int i = 2; i < number; i++) {
             if (number % i == 0) {
                 return false;
